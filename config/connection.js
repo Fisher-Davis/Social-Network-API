@@ -1,9 +1,9 @@
 const { connect, connection } = require('mongoose');
 
-const connectionString =
+const establishConnection =
   process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/usersDB';
 
-connect(connectionString, {
+connect(establishConnection, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
